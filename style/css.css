@@ -1,0 +1,94 @@
+/** {
+	margin: 0 auto;
+	padding: 0 auto;
+}*/
+body {
+	display: block;
+	background-color: #ecf0f1;
+}
+div.container-fluid {
+	margin-top: 10px;
+/*	padding-left: 500px;
+	padding-right: 500px;*/
+	margin-left: relative 0 auto;
+	margin-right: 0 auto;
+}
+span#header {
+	font-size: 2.0em;
+	text-align: center;
+	width: 400px;
+	margin-left: 0 auto;
+}
+form.form-horizontal {
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+}
+fieldset.daftar {
+	/*margin: 0 auto;*/
+	display: block;
+	margin-left: 20%;
+	margin-right: 20%;
+	border: 2px solid gray;
+	padding-right: 5px;
+	/*border-color: black;*/
+	/*background-color: #27ae60;*/
+}
+legend.label {
+	color: white;
+	background-color: #f39c12;
+	width: 300px;
+	height: 40px;
+	text-align: left;
+	font-size: 1.8em;
+	padding-left: 0 auto;
+	padding-top: 8px;
+	margin-left: 20px;
+}
+legend#view {
+	width: 230px;
+}
+div.form-group {
+	margin: 5px;
+	padding: 10px;
+}
+span#profile.label {
+	text-align: center;
+	font-size: 2.5em;
+	width: 70%;
+	margin: 5px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+span.label {
+	color: white;
+	font-size: 1.2em;
+	float: left;
+	width: 200px;
+	text-align: center;
+	margin: 5px;
+	margin-left: 35px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 15px;
+	/*background-color: #27ae60;*/
+}
+div.col-lg-6 {
+	display: inline-block;
+	margin: 5px;
+}
+div.col-lg-8 {
+	display: inline-block;
+	margin: 5px;
+}
+div.btn {
+	margin: 10px;
+	margin-left: 50%;
+}
+/*view.php*/
+div.view {
+	font-size: 1.2em;
+	padding-top: 2.5px;
+}
