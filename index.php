@@ -8,7 +8,7 @@
 	<div class="container-fluid">
 		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
 	</div></br>
-	<form class="form-horizontal" name="daftarpb" action="insert.php" method="POST">
+	<form class="form-horizontal" name="daftarpb" action="insert_pb.php" method="POST">
 		<fieldset class="daftar">
 			<legend class="label label-warning"><strong>Daftar Pusat Bertauliah</strong></legend>
 					<div class="form-group">
@@ -46,6 +46,7 @@
 						<span class="label label-success">Email</span>
 						<div class="col-lg-6">
 							<input class="form-control" id="email" name="email" placeholder="email@domain" type="text" maxlength="50">
+						</div>
 						</div>
 					</div>
 					<div class="form-group">

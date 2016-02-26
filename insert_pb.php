@@ -1,8 +1,7 @@
 <?php
 require 'db.php';
 
-		if(isset($_POST["daftarpb"])); {
-
+		if(isset($_POST["daftarpb"])); { 
 		$kodpb = $_POST["kodpb"];
 		$jenispb = $_POST["jenispb"];
 		$namapb = $_POST["namapb"];
