@@ -2,13 +2,13 @@
 require 'db.php';
 
 		if(isset($_POST["daftarpb"])); { 
-		$kodpb = $_POST["kodpb"];
+		$kodpb = strtoupper($_POST["kodpb"]);
 		$jenispb = $_POST["jenispb"];
-		$namapb = $_POST["namapb"];
+		$namapb = strtoupper($_POST["namapb"]);
 		$notel = $_POST["notel"];
 		$email = $_POST["email"];
 		$negeri	= $_POST["negeri"];
-		$alamatpb = $_POST["alamatpb"];
+		$alamatpb = strtoupper($_POST["alamatpb"]);
 
 			$sql = "INSERT INTO pb (kodpb, namapb, alamatpb, notel, email, negeri)
 			VALUES ('$kodpb','$namapb', '$alamatpb', '$notel', '$email', '$negeri')";

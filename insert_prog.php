@@ -8,13 +8,13 @@
 	<div class="container-fluid">
 		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
 	</div></br>
-	<form class="form-horizontal" name="daftarpb" action="insert.php" method="POST">
+	<form class="form-horizontal" name="daftarpb" action="insert_prog.php" method="POST">
 		<fieldset class="daftar">
 			<legend class="label label-warning"><strong>Daftar Program Pusat Bertauliah</strong></legend>
 					<div class="form-group">
 					<span class="label label-success">Kod Program</span>
 						<div class="col-lg-6">
-							<input class="form-control"  <?php strtoupper("kodpb")?> id="kodprog" name="kodprog" placeholder="Kod Program" style="text-transform: uppercase" type="text">
+							<input class="form-control" id="kodprog" name="kodprog" placeholder="Kod Program" style="text-transform: uppercase" type="text">
 						</div>
 					</div>
 					<div class="form-group">

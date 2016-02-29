@@ -14,7 +14,7 @@
 					<div class="form-group">
 					<span class="label label-success">Kod PB</span>
 						<div class="col-lg-6">
-							<input class="form-control"  <?php strtoupper("kodpb")?> id="kodpb" name="kodpb" placeholder="Kod PB" style="text-transform: uppercase" type="text" maxlength="6">
+							<input class="form-control" id="kodpb" name="kodpb" placeholder="Kod PB" style="text-transform: uppercase" type="text" maxlength="6">
 						</div>
 					</div>
 					<div class="form-group">
