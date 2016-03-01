@@ -8,8 +8,13 @@ body {
 }
 div.container-fluid {
 	margin-top: 10px;
+<<<<<<< HEAD
 	padding-left: 750px;
 	/*padding-right: 800px;*/
+=======
+	padding-left: 500px;
+	padding-right: 500px;
+>>>>>>> origin/master
 }
 span#header {
 	font-size: 2.0em;
