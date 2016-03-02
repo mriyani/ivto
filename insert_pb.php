@@ -10,10 +10,10 @@ require 'db.php';
 		$negeri	= $_POST["negeri"];
 		$alamatpb = strtoupper($_POST["alamatpb"]);
 
-			$sql = "INSERT INTO pb (kodpb, namapb, alamatpb, notel, email, negeri)
+			$add = "INSERT INTO pb (kodpb, namapb, alamatpb, notel, email, negeri)
 			VALUES ('$kodpb','$namapb', '$alamatpb', '$notel', '$email', '$negeri')";
 
-			if (!mysqli_query($dbc,$sql)) {
+			if (!mysqli_query($dbc,$add)) {
 				$last_id = mysqli_insert_id($dbc);
 				session_start();
 				echo "Error: " . mysql_errno() . mysqli_error($dbc);

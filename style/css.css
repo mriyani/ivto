@@ -8,13 +8,8 @@ body {
 }
 div.container-fluid {
 	margin-top: 10px;
-<<<<<<< HEAD
 	padding-left: 750px;
-	/*padding-right: 800px;*/
-=======
-	padding-left: 500px;
-	padding-right: 500px;
->>>>>>> origin/master
+	/*padding-right: 750px;*/
 }
 span#header {
 	font-size: 2.0em;
@@ -48,6 +43,9 @@ legend.label {
 }
 legend#view {
 	width: 230px;
+}
+legend#program {
+	width: 415px;
 }
 div.form-group {
 	margin: 5px;
