@@ -14,11 +14,11 @@
 			$add = "INSERT INTO pb (kodpb, namapb, alamatpb, notel, email, negeri, poskod)
 			VALUES ('$kodpb','$namapb', '$alamatpb', '$notel', '$email', '$negeri', '$poskod')";
 
-			if (!mysqli_query($dbc,$add)) {
+			if (mysqli_query($dbc,$add)) {
 				
-				echo "Error: " . mysql_errno() . mysqli_error($dbc);
+				
 			} {
-				$last_id = "mysql_insert_id()";
+				echo "Error: " . mysql_errno() . mysqli_error($dbc);
 
 			}
 
@@ -43,7 +43,6 @@
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
-	<?php echo "$last_id"; ?>
 		<div class="container-fluid">
 			<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
 		</div></br>
