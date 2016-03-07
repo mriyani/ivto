@@ -80,6 +80,12 @@
 							<textarea class="form-control" id="alamatpb" name="alamatpb" placeholder="Alamat" style="text-transform: uppercase" type="text" maxlength="200" rows="3" required></textarea>
 						</div>
 					</div>
+					<div class="form-group">
+						<span class="label label-success">Poskod</span>
+						<div class="col-lg-6">
+							<input class="form-control" id="poskod" name="poskod" placeholder="Poskod" type="text" maxlength="6" required>
+						</div>
+					</div>
 				</fieldset><br>
 			<div class="container" align="center">
 				<button type="submit" name="submit" class="btn btn-info">Simpan</button>

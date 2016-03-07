@@ -17,18 +17,16 @@ span#header {
 	width: 400px;
 }
 form.form-horizontal {
-	margin-left: 0 auto;
-	margin-right: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 fieldset.daftar {
-	/*margin: 0 auto;*/
+	margin: 0 auto;
 	display: block;
 	margin-left: 20%;
 	margin-right: 20%;
 	border: 2px solid gray;
-	padding-right: 5px;
-	/*border-color: black;*/
-	/*background-color: #27ae60;*/
+	/*padding-right: 5px;*/
 }
 legend.label {
 	color: white;
@@ -37,7 +35,7 @@ legend.label {
 	height: 40px;
 	text-align: left;
 	font-size: 1.8em;
-	padding-left: 0 auto;
+	padding-left: auto;
 	padding-top: 8px;
 	margin-left: 20px;
 }

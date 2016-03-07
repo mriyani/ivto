@@ -1,27 +1,38 @@
+<?php require 'db.php'; ?>
 <?php
-require 'db.php';
+		if(isset($_POST["submit"])); {
 
-		if(isset($_POST["daftarpb"])); { 
 		$kodpb = strtoupper($_POST["kodpb"]);
 		$jenispb = $_POST["jenispb"];
 		$namapb = strtoupper($_POST["namapb"]);
 		$notel = $_POST["notel"];
 		$email = $_POST["email"];
 		$negeri	= $_POST["negeri"];
+		$poskod	= $_POST["poskod"];
 		$alamatpb = strtoupper($_POST["alamatpb"]);
 
-			$add = "INSERT INTO pb (kodpb, namapb, alamatpb, notel, email, negeri)
-			VALUES ('$kodpb','$namapb', '$alamatpb', '$notel', '$email', '$negeri')";
+			$add = "INSERT INTO pb (kodpb, namapb, alamatpb, notel, email, negeri, poskod)
+			VALUES ('$kodpb','$namapb', '$alamatpb', '$notel', '$email', '$negeri', '$poskod')";
 
 			if (!mysqli_query($dbc,$add)) {
-				$last_id = mysqli_insert_id($dbc);
-				session_start();
+				
 				echo "Error: " . mysql_errno() . mysqli_error($dbc);
-			} /*else {
-				echo "Pusat Bertauliah Berjaya Didaftarkan.";
+			} {
+				$last_id = "mysql_insert_id()";
 
-			}*/
-			mysqli_close($dbc);
+			}
+
+			$sel = "SELECT 'kodpb' FROM pb WHERE kodpb='$kodpb' LIMIT 1";
+			$result = mysqli_query($dbc,$sel);
+
+			if (mysqli_num_rows($result) > 0) {
+
+			}
+
+
+
+			} {
+			// mysqli_close($dbc);
 			// header('Location: view.php');
 		}
 ?>
@@ -32,6 +43,7 @@ require 'db.php';
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
+	<?php echo "$last_id"; ?>
 		<div class="container-fluid">
 			<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
 		</div></br>
@@ -41,7 +53,7 @@ require 'db.php';
 				<div class="form-group">
 					<span class="label label-success">Kod PB</span>
 					<div class="col-lg-6">
-						<div class="view"><?php echo "$kodpb"; ?></div>
+						<div class="view"><?php echo "kodpb"; ?></div>
 					</div>
 				</div>
 				<div class="form-group">
@@ -78,6 +90,12 @@ require 'db.php';
 					<span class="label label-success">Alamat</span>
 					<div class="col-lg-6">
 						<div class="view"><?php echo "$alamatpb"; ?></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<span class="label label-success">Poskod</span>
+					<div class="col-lg-6">
+						<div class="view"><?php echo "$poskod"; ?></div>
 					</div>
 				</div>
 			</fieldset><br>
