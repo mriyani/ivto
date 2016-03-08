@@ -4,8 +4,9 @@
 }*/
 body {
 	display: block;
-	background-color: #ecf0f1;
-}
+	background-color: #fff;
+	/*background-color: #ecf0f1;*/
+	}
 div.container-fluid {
 	margin-top: 10px;
 	padding-left: 750px;
@@ -25,18 +26,17 @@ fieldset.daftar {
 	display: block;
 	margin-left: 20%;
 	margin-right: 20%;
-	border: 2px solid gray;
-	/*padding-right: 5px;*/
+	border: 3px solid gray;
+	border-radius: 10px;
+	padding-right: 5px;
 }
 legend.label {
-	color: white;
 	background-color: #f39c12;
 	width: 300px;
 	height: 40px;
 	text-align: left;
 	font-size: 1.8em;
-	padding-left: auto;
-	padding-top: 8px;
+	padding: 0 auto;
 	margin-left: 20px;
 }
 legend#view {
