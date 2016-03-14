@@ -8,14 +8,14 @@
 	<div class="container-fluid">
 		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
 	</div></br>
-	<form class="form-horizontal" name="daftarprog" action="edit_prog.php" method="POST">
+	<form class="form-horizontal" name="daftar_prog" action="view_prog.php" method="POST">
 		<fieldset class="daftar">
 			<legend class="label label-warning" id="program"><strong>Daftar Program Pusat Bertauliah</strong></legend>
 					<div class="form-group">
 					<span class="label label-success">Kod Program</span>
 						<div class="col-lg-6">
 							<input class="form-control" id="kodprog" name="kodprog" placeholder="Kod Program" style="text-transform: uppercase" type="text" maxlength="13" required>
-							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY/MM/DD</strong></h5>
+							<h5 style="color: red">Sila masukkan Kod Program seperti contoh : <strong style="color: black">IT-020-5:2013</strong></h5>
 						</div>
 					</div>
 					<div class="form-group">
@@ -41,15 +41,15 @@
 					<div class="form-group">
 						<span class="label label-success">Tarikh Mula Tauliah</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="tarikhmula" name="tarikhmula" placeholder="" required>
-							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY/MM/DD</strong></h5>
+							<input class="form-control" id="tmula" name="tmula" type="date" placeholder="" required>
+							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY-MM-DD</strong></h5>
 						</div>
 					</div>
 					<div class="form-group">
 						<span class="label label-success">Tarikh Tamat Tauliah</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="tarikhtamat" name="tarikhtamat" placeholder="" required>
-							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY/MM/DD</strong></h5>
+							<input class="form-control" id="ttamat" name="ttamat" type="date" placeholder="" required>
+							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY-MM-DD</strong></h5>
 						</div>
 					</div>
 				</fieldset><br>

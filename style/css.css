@@ -88,5 +88,21 @@ div.btn {
 /*view.php*/
 div.view {
 	font-size: 1.2em;
-	padding-top: 2.5px;
+	padding-top: 10px;
+}
+.menu_btn {
+	margin-top: 20px;
+	margin-right: 100px;
+	margin-bottom: 45px;
+	margin-left: 100px;
+	padding-left: 150px;
+	padding-right: 50px;
+}
+a:link {
+	color: #fff;
+	text-decoration: none;
+}
+a:visited {
+	color: #fff;
+	text-decoration: none;
 }
