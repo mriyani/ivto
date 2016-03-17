@@ -44,9 +44,9 @@
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
-		<div class="container-fluid">
-			<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
-		</div></br>
+	<div class="container-fluid">
+		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
+	</div></br>
 		<form class="form-horizontal">
 			<fieldset class="daftar">
 				<legend id="view" class="label label-warning"><strong>Pusat Bertauliah</strong></legend>
@@ -102,9 +102,7 @@
 				<!-- <div class="container" align="center">
 					<button type="Submit" class="btn btn-info">Simpan</button>
 				</div><br> -->
-			</form>
+		</form>
 
-<script src="/bootstrap/js/jquery.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

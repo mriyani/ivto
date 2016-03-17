@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'conx/db.php';
 
 		if(isset($_POST["submit"])); {
 		$kodprog = strtoupper($_POST["kodprog"]);
@@ -25,8 +25,8 @@ require 'db.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Permohonan Internship</title>
 	<?php include ('hnf.php'); ?>
+	<title>Sistem Permohonan Internship</title>
 </head>
 <body>
 	<div class="container-fluid">
@@ -44,7 +44,7 @@ require 'db.php';
 					<div class="form-group">
 						<span class="label label-success">Nama Program</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="namaprog" name="namaprog" placeholder="Nama Program" style="text-transform: uppercase" type="text" maxlength="100" required>
+							<input class="form-control" id="namaprog" name="namaprog" placeholder="Nama Program" style="text-transform: uppercase" type="text" maxlength="100" required />
 						</div>
 					</div>
 					<div class="form-group">
@@ -64,24 +64,21 @@ require 'db.php';
 					<div class="form-group">
 						<span class="label label-success">Tarikh Mula Tauliah</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="tarikhmula" name="tarikhmula" type="date" placeholder="" required>
+							<input class="form-control" id="tarikhmula" name="tarikhmula" type="date" placeholder="" required />
 							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY/MM/DD</strong></h5>
 						</div>
 					</div>
 					<div class="form-group">
 						<span class="label label-success">Tarikh Tamat Tauliah</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="tarikhtamat" name="tarikhtamat" type="date" placeholder="" required>
+							<input class="form-control" id="tarikhtamat" name="tarikhtamat" type="date" placeholder="" required />
 							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY/MM/DD</strong></h5>
 						</div>
 					</div>
-				</fieldset><br>
+		</fieldset><br>
 			<div class="container" align="center">
 				<button type="submit" name="submit" class="btn btn-info">Simpan</button>
 			</div><br>
 	</form>
-
-	<script src="/bootstrap/js/jquery.js"></script>
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

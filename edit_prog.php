@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'conx/db.php';
 
 		if(isset($_POST["daftarprog"])); {
 		$kodprog = strtoupper($_POST["kodprog"]);
@@ -26,8 +26,8 @@ require 'db.php';
 ?><!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Permohonan Internship</title>
 	<?php include ('hnf.php'); ?>
+	<title>Sistem Permohonan Internship</title>
 </head>
 <body>
 	<div class="container-fluid">
@@ -77,13 +77,10 @@ require 'db.php';
 							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY/MM/DD</strong></h5>
 						</div>
 					</div>
-				</fieldset><br>
+		</fieldset><br>
 			<div class="container" align="center">
 				<button type="submit" name="submit" class="btn btn-info">Simpan</button>
 			</div><br>
 	</form>
-
-	<script src="/bootstrap/js/jquery.js"></script>
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

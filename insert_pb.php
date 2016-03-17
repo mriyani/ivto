@@ -1,4 +1,4 @@
-<?php require 'db.php'; ?>
+<?php require 'conx/db.php'; ?>
 <?php
 		if(isset($_POST["submit"])){
 
@@ -40,8 +40,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Permohonan Internship</title>
 	<?php include ('hnf.php'); ?>
+	<title>Sistem Permohonan Internship</title>
 </head>
 <body>
 		<div class="container-fluid">
@@ -102,9 +102,6 @@
 				<!-- <div class="container" align="center">
 					<button type="Submit" class="btn btn-info">Simpan</button>
 				</div><br> -->
-			</form>
-
-<script src="/bootstrap/js/jquery.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
+		</form>
 </body>
 </html>

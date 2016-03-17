@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Permohonan Internship</title>
 	<?php include ('hnf.php'); ?>
+	<title>Sistem Permohonan Internship</title>
 </head>
 <body>
 	<div class="container-fluid">
@@ -14,14 +14,14 @@
 					<div class="form-group">
 					<span class="label label-success">Kod Program</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="kodprog" name="kodprog" placeholder="Kod Program" style="text-transform: uppercase" type="text" maxlength="13" required>
+							<input class="form-control" id="kodprog" name="kodprog" placeholder="Kod Program" style="text-transform: uppercase" type="text" maxlength="13" required />
 							<h5 style="color: red">Sila masukkan Kod Program seperti contoh : <strong style="color: black">IT-020-5:2013</strong></h5>
 						</div>
 					</div>
 					<div class="form-group">
 						<span class="label label-success">Nama Program</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="namaprog" name="namaprog" placeholder="Nama Program" style="text-transform: uppercase" type="text" maxlength="100" required>
+							<input class="form-control" id="namaprog" name="namaprog" placeholder="Nama Program" style="text-transform: uppercase" type="text" maxlength="100" required />
 						</div>
 					</div>
 					<div class="form-group">
@@ -41,14 +41,14 @@
 					<div class="form-group">
 						<span class="label label-success">Tarikh Mula Tauliah</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="tmula" name="tmula" type="date" placeholder="" required>
+							<input class="form-control" id="tmula" name="tmula" type="date" placeholder="" required />
 							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY-MM-DD</strong></h5>
 						</div>
 					</div>
 					<div class="form-group">
 						<span class="label label-success">Tarikh Tamat Tauliah</span>
 						<div class="col-lg-6">
-							<input class="form-control" id="ttamat" name="ttamat" type="date" placeholder="" required>
+							<input class="form-control" id="ttamat" name="ttamat" type="date" placeholder="" required />
 							<h5 style="color: red">Sila masukkan Tarikh seperti contoh : <strong style="color: black">YYYY-MM-DD</strong></h5>
 						</div>
 					</div>
@@ -57,8 +57,5 @@
 				<button type="submit" name="submit" class="btn btn-info">Simpan</button>
 			</div><br>
 	</form>
-
-	<script src="/bootstrap/js/jquery.js"></script>
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
