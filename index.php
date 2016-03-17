@@ -5,9 +5,6 @@
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
-	<div class="container-fluid">
-		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
-	</div></br>
 	<form class="form-horizontal" name="daftarpb" action="insert_pb.php" method="POST">
 		<fieldset class="daftar">
 			<legend class="label label-warning"><strong>Daftar Pusat Bertauliah</strong></legend>
@@ -23,6 +20,7 @@
 							<!-- <input class="form-control" id="kodpb" name="kodpb" placeholder="Jenis PB" style="text-transform: uppercase" type="text" maxlength="6"> -->
 							<select class="form-control" id="jenispb" name="jenispb" required>
 								<option></option>
+								<option>INDUSTRI</option>
 								<option>KERAJAAN</option>
 								<option>PERSATUAN / PERTUBUHAN</option>
 								<option>SWASTA</option>
@@ -91,8 +89,5 @@
 				<button type="submit" name="submit" class="btn btn-info">Simpan</button>
 			</div><br>
 	</form>
-
-	<script src="/bootstrap/js/jquery.js"></script>
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

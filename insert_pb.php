@@ -20,11 +20,9 @@
 				else
 					header("location: insert_pb.php");
 
-				
-
-				// mysqli_close($dbc);
-				// header('Location: view.php');
 		} 
+ 
+		// $addjenis = "INSERT INTO pb_jenis () VALUES ()";
 
 		$sel = "SELECT * FROM pb ORDER BY id DESC LIMIT 1";
 		$result = mysqli_query($dbc,$sel);
@@ -44,22 +42,19 @@
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
-		<div class="container-fluid">
-			<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
-		</div></br>
 		<form class="form-horizontal">
 			<fieldset class="daftar">
 				<legend id="view" class="label label-warning"><strong>Pusat Bertauliah</strong></legend>
 				<div class="form-group">
 					<span class="label label-success">Kod PB</span>
 					<div class="col-lg-6">
-						<div class="view"><?php echo $row['id']; ?></div>
+						<div class="view"><?php echo $row['kodpb']; ?></div>
 					</div>
 				</div>
 				<div class="form-group">
 					<span class="label label-success">Jenis PB</span>
 					<div class="col-lg-6">
-						<div class="view"><?php echo $row['kodpb']; ?></div>
+						<div class="view"><?php echo $row['']; ?></div>
 					</div>
 				</div>
 				<div class="form-group">
@@ -102,9 +97,6 @@
 				<!-- <div class="container" align="center">
 					<button type="Submit" class="btn btn-info">Simpan</button>
 				</div><br> -->
-			</form>
-
-<script src="/bootstrap/js/jquery.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
+		</form>
 </body>
 </html>

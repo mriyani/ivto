@@ -1,3 +1,11 @@
+<?php
+require_once 'db.php';
+session_start();
+echo $last_id;
+
+$sel = "SELECT * FROM pb";
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,20 +13,9 @@
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
-	<?php
-	require 'db.php';
-	session_start();
-	echo $last_id;
-
-	$sel = "SELECT * FROM pb";
-
-	?>
-	<div class="container-fluid">
-		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
-	</div></br>
 		<form class="form-horizontal">
-		<fieldset class="daftar">
-			<legend id="view" class="label label-warning"><strong>Pusat Bertauliah</strong></legend>
+			<fieldset class="daftar">
+				<legend id="view" class="label label-warning"><strong>Pusat Bertauliah</strong></legend>
 
 					<div class="form-group">
 					<span class="label label-success">Kod PB</span>
@@ -67,9 +64,5 @@
 				<button type="Submit" class="btn btn-info">Simpan</button>
 			</div><br>
 		</form>
-
-
-<script src="/bootstrap/js/jquery.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

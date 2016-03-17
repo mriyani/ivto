@@ -1,23 +1,25 @@
-/** {
+ /** {
 	margin: 0 auto;
 	padding: 0 auto;
 }*/
 body {
 	display: block;
 	background-color: #fff;
-	/*background-color: #ecf0f1;*/
+	margin: 0px auto;
+	padding: 0px auto;
+	background-color: #fff;
 	}
-div.container-fluid {
-	margin-top: 10px;
-	padding-left: 750px;
-	/*padding-right: 750px;*/
+.container-fluid {
+	margin: 15px;
+	text-align: center;
 }
-span#header {
+#header.label {
 	font-size: 2.0em;
 	text-align: center;
-	width: 400px;
+	width: 0px auto;
+	margin: 0px auto;
 }
-form.form-horizontal {
+.form-horizontal {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -32,20 +34,14 @@ fieldset.daftar {
 }
 legend.label {
 	background-color: #f39c12;
-	width: 300px;
+	width: auto;
 	height: 40px;
 	text-align: left;
 	font-size: 1.8em;
 	padding: 0 auto;
 	margin-left: 20px;
 }
-legend#view {
-	width: 230px;
-}
-legend#program {
-	width: 415px;
-}
-div.form-group {
+.form-group {
 	margin: 5px;
 	padding: 10px;
 }
@@ -84,9 +80,4 @@ div.col-lg-8 {
 div.btn {
 	margin: 10px;
 	margin-left: 50%;
-}
-/*view.php*/
-div.view {
-	font-size: 1.2em;
-	padding-top: 2.5px;
 }

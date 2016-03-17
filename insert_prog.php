@@ -5,9 +5,6 @@
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
-	<div class="container-fluid">
-		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
-	</div></br>
 	<form class="form-horizontal" name="daftarprog" action="edit_prog.php" method="POST">
 		<fieldset class="daftar">
 			<legend class="label label-warning" id="program"><strong>Daftar Program Pusat Bertauliah</strong></legend>
@@ -57,8 +54,5 @@
 				<button type="submit" name="submit" class="btn btn-info">Simpan</button>
 			</div><br>
 	</form>
-
-	<script src="/bootstrap/js/jquery.js"></script>
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
