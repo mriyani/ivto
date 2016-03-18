@@ -11,6 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="style/css.css">
 </head>
 <body>
+	<div id="header" class="label label-primary">Sistem Permohonan Internship</div>
+	</br></br>
 	<script src="/bootstrap/js/jquery.js"></script>
 	<script src="/bootstrap/js/bootstrap.min.js"></script>
 	<footer>

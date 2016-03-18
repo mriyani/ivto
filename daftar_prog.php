@@ -5,12 +5,9 @@
 	<title>Sistem Permohonan Internship</title>
 </head>
 <body>
-	<div class="container-fluid">
-		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
-	</div></br>
 	<form class="form-horizontal" name="daftar_prog" action="view_prog.php" method="POST">
 		<fieldset class="daftar">
-			<legend class="label label-warning" id="program"><strong>Daftar Program Pusat Bertauliah</strong></legend>
+			<legend class="label label-warning" id="program"><strong>Daftar Program</strong></legend>
 					<div class="form-group">
 					<span class="label label-success">Kod Program</span>
 						<div class="col-lg-6">

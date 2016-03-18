@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 	<title>Sistem Permohonan Internship</title>
-	<?php include ('hnf.php'); ?>
+<style>
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: #5cb85c;
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: #5cb85c;
+    border-width: 1px;
+    border-radius: 4px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(119, 119, 119, 1);
+    background-color: #5cb85c;
+    background: -webkit-linear-gradient(top, rgba(248, 248, 248, 0) 0%, rgba(248, 248, 248, 0) 100%);
+    background: linear-gradient(to bottom, rgba(248, 248, 248, 0) 0%, rgba(248, 248, 248, 0) 100%);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: #5cb85c;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: #5cb85c;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #5cb85c;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #5cb85c;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #5cb85c;
+}
+</style>
 </head>
 <body>
-	<div class="container-fluid">
-		<span class="label label-primary" id="header">Sistem Permohonan Internship (iVTO)</span>
-	</div></br>
-		<fieldset class="daftar">
-			<legend id="view" class="label label-warning"><strong>Menu Pengguna</strong></legend>
-			<div class="menu_btn">
-				<button class="btn btn-success"><a href="mohon_intern.php">Mohon Pusat Bertauliah Internship</a></button>
-				<button class="btn btn-info"><a href="daftar_pb.php">Daftar Pusat Bertauliah</a></button>
-				<button class="btn btn-warning"><a href="daftar_prog.php">Daftar Program Pusat Bertauliah</a></button>
-			</div>
-		</fieldset><br>
+<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse navbar-menubuilder">
+            <ul class="nav navbar-nav navbar-center">
+                <li><a href="/">Home</a>
+                </li>
+                <li><a href="/products">Products</a>
+                </li>
+                <li><a href="/about-us">About Us</a>
+                </li>
+                <li><a href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>

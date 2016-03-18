@@ -29,9 +29,6 @@ require 'conx/db.php';
 	<title>Sistem Permohonan Internship</title>
 </head>
 <body>
-	<div class="container-fluid">
-		<span id="header" class="label label-primary">Maklumat Pusat Bertauliah</span>
-	</div></br>
 	<form class="form-horizontal" name="view_prog">
 		<fieldset class="daftar">
 			<legend class="label label-warning" id="program"><strong>Daftar Program Pusat Bertauliah</strong></legend>
