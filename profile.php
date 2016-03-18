@@ -42,7 +42,7 @@ if(isset($_SESSION['id_user'])) {
 			<div class="form-group">
 				<span class="label label-success">Nama Program</span>
 					<div class="col-md-5">
-						<div class="view" name="nkp"><?php echo "$kod_prog"." - "."$nama_prog"; ?></div>
+						<div class="view" name="nama_prog"><?php echo "$kod_prog"." - "."$nama_prog"; ?></div>
 					</div>
 			</div>
 		</fieldset><br>

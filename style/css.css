@@ -21,7 +21,7 @@ body {
 }
 .form-horizontal {
 	margin: 0px auto;
-	display: block;
+	display: inline-block;
 }
 fieldset {
 	margin: 0 auto;
@@ -44,7 +44,7 @@ legend.label {
 .form-group {
 	display: block;
 	margin: 5px auto;
-	padding: 0px auto;
+	padding: auto;
 }
 span.label {
 	font-size: 1.2em;
@@ -56,9 +56,14 @@ span.label {
 	padding: 10px 15px 15px 10px;
 }
 .col-lg-6 {
-	display: block;
+	display: inline-block;
 	margin: 0px auto;
-	width: 0px auto;
+	width: auto;
+}
+.col-md-5 {
+	display: inline-block;
+	margin: 0px auto;
+	width: auto;
 }
 .msg {
 	margin: 0px auto;
@@ -66,6 +71,7 @@ span.label {
 .view {
 	float: left;
 	margin-top: 5px;
+	width: auto;
 }
 .btn {
 	text-decoration: none;
