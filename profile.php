@@ -3,7 +3,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 if(isset($_SESSION['id'])) {
 	require_once('conx/db.php');
-	$sql = "SELECT * FROM user";
+	$id =  $_SESSION['id'];
+	$sql = "SELECT * FROM user WHERE id = '$id' ";
 	$query = mysqli_query($dbc, $sql);
 	$result = mysqli_fetch_assoc($query);
 	$name = $result['nama'];
