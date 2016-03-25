@@ -20,6 +20,7 @@ if(isset($_SESSION['id_user'])) {
 <!DOCTYPE html>
 <html>
 <head>
+	<?php include ('menu.php'); ?>
 	<?php include ('hnf.php'); ?>
 	<title>Sistem Permohonan Internship</title>
 </head>
@@ -46,9 +47,6 @@ if(isset($_SESSION['id_user'])) {
 					</div>
 			</div>
 		</fieldset><br>
-			<div class="container" align="center">
-				<button type="Submit" name="logout" class="btn btn-info">Logout</a></button>
-			</div><br>
 	</form>
 </body>
 </html>

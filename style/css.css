@@ -21,11 +21,11 @@ body {
 }
 .form-horizontal {
 	margin: 0px auto;
-	display: inline-block;
+	display: block;
 }
 fieldset {
 	margin: 0 auto;
-	display: block;
+	display: inline-block;
 	margin-left: 20%;
 	margin-right: 20%;
 	border: 3px solid gray;
@@ -45,6 +45,7 @@ legend.label {
 	display: block;
 	margin: 5px auto;
 	padding: auto;
+	width: auto;
 }
 span.label {
 	font-size: 1.2em;
@@ -54,6 +55,7 @@ span.label {
 	margin: 0px auto;
 	margin-left: 35px;
 	padding: 10px 15px 15px 10px;
+	display: inline-block;
 }
 .col-lg-6 {
 	display: inline-block;

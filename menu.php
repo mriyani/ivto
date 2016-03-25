@@ -5,64 +5,70 @@
 	<link href="/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 	<title>Sistem Permohonan Internship</title>
 <style>
-#custom-bootstrap-menu.navbar-default .navbar-brand {
-    color: #5cb85c;
+nav.menu {
+    margin: 0px auto;
 }
-#custom-bootstrap-menu.navbar-default {
-    font-size: 14px;
-    background-color: #5cb85c;
-    border-width: 1px;
-    border-radius: 4px;
+.menu {
+    background-color:#90af48;
+    width:100%;
+    marg
 }
-#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: rgba(119, 119, 119, 1);
-    background-color: #5cb85c;
-    background: -webkit-linear-gradient(top, rgba(248, 248, 248, 0) 0%, rgba(248, 248, 248, 0) 100%);
-    background: linear-gradient(to bottom, rgba(248, 248, 248, 0) 0%, rgba(248, 248, 248, 0) 100%);
+
+.menu a {
+    text-decoration:none;
+    text-shadow:#999 1px 1px 2px;
 }
-#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
-#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(51, 51, 51, 1);
-    background-color: #5cb85c;
+
+.menu li {
+    transition:linear all 0.15s;
+    list-style:none;
 }
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(85, 85, 85, 1);
-    background-color: #5cb85c;
+
+.menu ul > li {
+    line-height:50px;
+    height:50px;
 }
-#custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #ddd;
+
+.menu > ul li:hover {
+    background-color:#809b40;
 }
-#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
-#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #5cb85c;
+
+.menu ul > li > a {
+    color:#FFF;
+    font-weight:bold;
+    padding:10px 30px;
 }
-#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #5cb85c;
+
+.menu > ul > li {
+    display:inline-block;
 }
-#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
-#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #5cb85c;
+
+.menu ul li ul {
+    position:absolute;
+    margin-left:-41px;
+}
+
+.menu > ul li ul li {
+    transition:linear all 0.15s;
+    background-color:#90af48;
+}
+
+.menu ul li ul {
+    display:none;
+}
+
+.menu ul li:hover ul {
+    display:block;
 }
 </style>
 </head>
 <body>
-<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-center">
-                <li><a href="/">Home</a>
-                </li>
-                <li><a href="/products">Products</a>
-                </li>
-                <li><a href="/about-us">About Us</a>
-                </li>
-                <li><a href="/contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<nav class="menu">
+    <ul>
+        <li><a href="profile.php">Home</a></li>
+        <li><a href="mohon_intern.php">Mohon Internship</a></li>
+        <li><a href="logout.php">Logout</a></li>
+    </ul>
+</nav>
 </body>
 </html>

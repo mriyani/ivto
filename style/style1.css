@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+body {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	background-color:#CCC;
+}
+
+button, .button {
+	background-color:#90af48;
+	border-radius:5px 5px;
+	color:#FFF;
+	padding:10px 20px;
+	border:none;
+	box-shadow:#666 1px 1px 2px;
+}
+
+.button.small {
+	padding:5px 10px;
+}
+
+button:hover {
+	background-color:#809b40;
+}
+
+.container {
+	background-color:#FFF;
+	width:1000px;
+	margin:auto;
+	box-shadow:#999 2px 2px 2px;
+}
+
+.menu {
+	background-color:#90af48;
+	width:100%;
+}
+
+.menu a {
+	text-decoration:none;
+	text-shadow:#999 1px 1px 2px;
+}
+
+.menu li {
+	transition:linear all 0.15s;
+	list-style:none;
+}
+
+.menu ul > li {
+	line-height:50px;
+	height:50px;
+}
+
+.menu > ul li:hover {
+	background-color:#809b40;
+}
+
+.menu ul > li > a {
+	color:#FFF;
+	font-weight:bold;
+	padding:10px 30px;
+}
+
+.menu > ul > li {
+	display:inline-block;
+}
+
+.menu ul li ul {
+	position:absolute;
+	margin-left:-41px;
+}
+
+.menu > ul li ul li {
+	transition:linear all 0.15s;
+	background-color:#90af48;
+}
+
+.menu ul li ul {
+	display:none;
+}
+
+.menu ul li:hover ul {
+	display:block;
+}
+
+.message {
+	font-size:12px;
+}
+
+.message-box {
+	margin:15px 25px;
+	padding:15px;
+	background-color:#CCC;
+	border-radius:5px 5px;
+	box-shadow:#999 1px 1px 2px;
+}
+
+.content {
+	padding:20px;
+}
+
+.item {
+	color:#333;
+	width:30%;
+	display:inline-block;
+	text-align:justify;
+	padding:10px;
+}
+
+.news {}
+
+.welcome {
+	top:0px;	
+	width:60%;
+}
+
+.welcome img {
+	margin-right:20px;
+	float:left;
+	border-radius:7px 7px;
+	box-shadow:#999 2px 2px 2px;
+}
+
+.img1 {
+	box-shadow:#999 0px 2px 2px;
+}
+
+.footer {
+	width:800px;
+	color:#666;
+	padding:15px 0px;
+	font-size:10px;
+	text-align:center;
+	margin:20px auto;
+	border-top:#CCC 1px solid;
+}
+
+.clip {
+	position:absolute;
+	top:0px;
+	left:1000px;
+}
+
+.product {
+	display:inline-block;
+	text-align:center;
+	width:20%;
+	margin:5px 15px;
+}
+
+.product p {
+	color:#666;
+	font-size:11px;
+	text-align:justify;
+}
+
+.product .input_number {
+	width:30px;
+}
+
+table.style1 {
+	border-collapse:collapse;
+}
+
+table.style1 td{
+	padding:3px 7px;
+	border:#666 1px solid;
+}
+/* CSS Document */
+
