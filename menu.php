@@ -67,6 +67,7 @@ nav.menu {
     <ul>
         <li><a href="profile.php">Home</a></li>
         <li><a href="mohon_intern.php">Mohon Internship</a></li>
+        <li><a href="daftar_pb.php">Daftar Pusat Bertauliah</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ul>
 </nav>

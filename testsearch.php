@@ -1,21 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
 <html>
 <head>
-	<title>Sistem Permohonan Internship</title>
-	<?php include ('menu.php'); ?>
-	<?php include ('hnf.php'); ?>
-</head>
-<body>
-<script type="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>PHP, jQuery search demo</title>
+<?php include ('menu.php'); ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+
+ 
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
 
 $( document ).ready(function() {
-	
+	alert('test');
 $("#nama_program").change(function(){
 
-alert('masukkan sql cari pb berdasarkan program kat sini');
+alert('test');
 
 }
 );
+
 
 
 
@@ -49,7 +57,7 @@ if(nama_program!='')
 	
 	 e.preventDefault();
     var id_prog = $(this).attr('value');
-	//alert(id_prog);
+	alert(id_prog);
 	var kod_prog=$(this).closest('tr').children('td.kod_prog').text();
 	var nama_prog=$(this).closest('tr').children('td.nama_prog').text();
 	var program = kod_prog.concat(" - ",nama_prog)
@@ -74,20 +82,13 @@ $('#nama_program').click(function(){
 
 });
 </script>
-	<form class="form-horizontal" name="profile" action="logout.php" method="POST">
-		<fieldset class="daftar">
-		<legend class="label label-warning"><strong>Mohon Pusat Bertauliah Internship</strong></legend>
-			<div class="form-group">
-				<span class="label label-success">Carian Kod Program</span>
-				<div class="col-md-5">
-					<div class="view" name="name"></div>
-					<div class="content">
-						<input type="text" class="form-control" autocomplete="off" id="nama_program" placeholder="Kod Program / Nama Program" />
-						<div id="senarai_program"></div>
-					</div>
-				</div>
-			</div>
-		</fieldset><br>
-	</form>
+</head>
+<body>
+<div class="content">
+<input type="text" class="form-control" autocomplete="off" id="nama_program" placeholder="Kod Program / Nama Program" />
+<div id="senarai_program"></div>
+
+</div>
+   
 </body>
 </html>

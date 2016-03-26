@@ -52,6 +52,5 @@ if (isset($_POST['submit'])) {
 				</div><br>
 			<div class="msg"><?php echo "$message"; ?></div>
 		</form>
-	
-</body>
+	</body>
 </html>

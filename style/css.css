@@ -25,7 +25,7 @@ body {
 }
 fieldset {
 	margin: 0 auto;
-	display: inline-block;
+	display: block;
 	margin-left: 20%;
 	margin-right: 20%;
 	border: 3px solid gray;
@@ -60,15 +60,12 @@ span.label {
 .col-lg-6 {
 	display: inline-block;
 	margin: 0px auto;
-	width: auto;
+	width: 400px auto;
 }
 .col-md-5 {
 	display: inline-block;
 	margin: 0px auto;
 	width: auto;
-}
-.msg {
-	margin: 0px auto;
 }
 .view {
 	float: left;
@@ -81,4 +78,10 @@ span.label {
 a:hover {
 	text-decoration: none;
 	font-weight: 5px;
+}
+.msg {
+	margin: 0px auto;
+}
+nav {
+	font-size: 1.2em;
 }

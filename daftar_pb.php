@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Sistem Permohonan Internship</title>
+	<?php include ('menu.php'); ?>
 	<?php include ('hnf.php'); ?>
 </head>
 <body>
@@ -19,6 +20,7 @@
 						<div class="col-lg-6">
 							<select class="form-control" id="jenispb" name="jenispb" required>
 								<option></option>
+								<option>INDUSTRI</option>
 								<option>KERAJAAN</option>
 								<option>PERSATUAN / PERTUBUHAN</option>
 								<option>SWASTA</option>
