@@ -5,11 +5,11 @@ body {
 	text-align: center;
 	background-color: #fff;
 }
-.container-fluid {
+/*.container-fluid {
 	margin: 10px;
 	padding-left: 750px;
 	padding-right: 750px;
-}
+}*/
 #header.label {
 	font-size: 2.0em;
 	text-align: center;
@@ -82,6 +82,6 @@ a:hover {
 .msg {
 	margin: 0px auto;
 }
-nav {
+.navbar {
 	font-size: 1.2em;
 }

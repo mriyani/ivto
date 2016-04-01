@@ -4,7 +4,7 @@ session_start();
 
 if (isset($_POST['submit'])) {
 	require_once('conx/db.php');
-	$message ="Sila pastikan USERNAME dan PASSWORD anda betul!";
+	$message ="Sila pastikan USERNAME dan PASSWORD anda betul !!!";
 	$uname = strip_tags($_POST['username']);
 	$pass = strip_tags($_POST['password']);
 
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 				</div>
 			</fieldset><br>
 				<div class="container" align="center">
-					<button type="submit" name="submit" class="btn btn-info">Login</button>
+					<button type="submit" name="submit" class="btn btn-info"><span class="glyphicon glyphicon-log-in"></span>  Login</button>
 				</div><br>
 			<div class="msg"><?php echo "$message"; ?></div>
 		</form>
