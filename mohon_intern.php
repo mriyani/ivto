@@ -9,17 +9,11 @@
 <script type="text/javascript">
 
 $( document ).ready(function() {
-	
-$("#nama_program").change(function(){
 
-alert('masukkan sql cari pb berdasarkan program kat sini');
-
-}
-);
-
-
-
+//search nama program
 $(function(){
+
+//cari nama program setiap kali taip	
 $("#nama_program").keyup(function() 
 { 
 
@@ -40,24 +34,10 @@ if(nama_program!='')
 	}
     });
 }return false;    
-});
+});  //end $("#nama_program").keyup(function
 
 
 
-	
-	$("#senarai_program").on("click",'tr',function(e){ 
-	
-	 e.preventDefault();
-    var id_prog = $(this).attr('value');
-	//alert(id_prog);
-	var kod_prog=$(this).closest('tr').children('td.kod_prog').text();
-	var nama_prog=$(this).closest('tr').children('td.nama_prog').text();
-	var program = kod_prog.concat(" - ",nama_prog)
-
-	$('#nama_program').val(program);
-	
-	
-});
 $("#senarai_program").on("click",function(e){ 
 //$(document).on("click", function(e) { 
     var $clicked = $(e.target);
@@ -72,6 +52,31 @@ $('#nama_program').click(function(){
 });
 
 
+//paparkan senarai pusat bertauliah yang tawar program yang dipilih
+	$("#senarai_program").on("click",'tr',function(e){ 
+	
+	 e.preventDefault();
+    var id_prog = $(this).attr('value');
+
+	var kod_prog=$(this).closest('tr').children('td.kod_prog').text();
+	var nama_prog=$(this).closest('tr').children('td.nama_prog').text();
+	var program = kod_prog.concat(" - ",nama_prog)
+
+	$('#nama_program').val(program);
+	
+  $.ajax({
+    method: "POST",
+    url: "pilih_pb.php",
+    data: { id_prog : id_prog },
+    success: function(html)
+    {
+    $("#senarai_pb").append(html);
+     
+	}
+    }); 
+	
+}); //emd $("#senarai_program").on("click",'tr',function(e)
+
 });
 </script>
 	<form class="form-horizontal" name="profile" action="logout.php" method="POST">
@@ -83,8 +88,11 @@ $('#nama_program').click(function(){
 					<div class="view" name="name"></div>
 					<div class="content">
 						<input type="text" class="form-control" autocomplete="off" id="nama_program" placeholder="Kod Program / Nama Program" />
+						<input type="hidden" id="id_program" />
+
 						<div id="senarai_program"></div>
 					</div>
+					<div id="senarai_pb"></div>
 				</div>
 			</div>
 		</fieldset><br>
