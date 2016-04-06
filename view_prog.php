@@ -1,5 +1,5 @@
 <?php
-require 'conx/db.php';
+require_once ('conx/db.php');
 
 		if(isset($_POST["submit"])); {
 		$kodprog = strtoupper($_POST["kodprog"]);
@@ -7,7 +7,6 @@ require 'conx/db.php';
 		$tahap = ($_POST["tahap"]);
 		$tmula = $_POST["tmula"];
 		$ttamat = $_POST["ttamat"];
-
 
 			$addprog = "INSERT INTO prog (kod_prog, nama_prog, tahap, tmula, ttamat)
 			VALUES ('$kodprog','$namaprog', '$tahap', '$tmula', '$ttamat')";

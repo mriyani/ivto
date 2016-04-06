@@ -1,7 +1,14 @@
-<?php require 'db.php'; ?>
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+if(isset($_SESSION['id_user'])) {
+} else {
+	header('Location: index.php');
+}
+?>
 <?php
 		if(isset($_POST["submit"])){
-
+			require_once ('db.php');
 			$kodpb = strtoupper($_POST["kodpb"]);
 			$jenispb = $_POST["jenispb"];
 			$namapb = strtoupper($_POST["namapb"]);

@@ -1,6 +1,16 @@
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+if(isset($_SESSION['id_user'])) {
+} else {
+	header('Location: index.php');
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
+	<?php include ('menu.php'); ?>
 	<?php include ('hnf.php'); ?>
 	<title>Sistem Permohonan Internship</title>
 </head>

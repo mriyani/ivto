@@ -1,3 +1,22 @@
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+if(isset($_SESSION['id_user'])) {
+	require_once('conx/db.php');
+	$id_user =  $_SESSION['id_user'];
+	$sql = "SELECT user.*, prog.kod_prog, prog.nama_prog FROM user LEFT JOIN prog ON user.id_prog = prog.id_prog WHERE user.id_user = '$id_user' ";
+	$query = mysqli_query($dbc, $sql);
+	$result = mysqli_fetch_assoc($query);
+	$name = $result['nama'];
+	$ndp = $result['ndp'];
+	$nkp = $result['nkp'];
+	$kod_prog = $result['kod_prog'];
+	$nama_prog = $result['nama_prog'];
+} else {
+	header('Location: index.php');
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

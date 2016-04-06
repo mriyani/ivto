@@ -2,51 +2,41 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>PHP, jQuery search demo</title>
+<title>PHP, jQuery Search</title>
 <?php include ('menu.php'); ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-
- 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <script type="text/javascript">
+<script type="text/javascript">
 
 $( document ).ready(function() {
-	alert('test');
+	//alert('test');
 $("#nama_program").change(function(){
 
-alert('test');
+//alert('test');
 
 }
 );
 
 
-
-
 $(function(){
-$("#nama_program").keyup(function() 
-{ 
+$("#nama_program").keyup(function() { 
 
-var nama_program = $(this).val();
-var dataString = 'search='+ nama_program;
+    var nama_program = $(this).val();
+    var dataString = 'search='+ nama_program;
 
-if(nama_program!='')
-{
-    $.ajax({
-    type: "POST",
-    url: "search.php",
-    data: dataString,
-    cache: false,
-    success: function(html)
-    {
-    $("#senarai_program").html(html).show();
-     
-	}
-    });
-}return false;    
+    if(nama_program!='') {
+        $.ajax({
+        type: "POST",
+        url: "search.php",
+        data: dataString,
+        cache: false,
+            success: function(html) {
+                $("#senarai_program").html(html).show();
+             
+        	}
+        });
+    }return false;    
 });
 
 
@@ -83,11 +73,12 @@ $('#nama_program').click(function(){
 </script>
 </head>
 <body>
-<div class="content">
-<input type="text" class="form-control" autocomplete="off" id="nama_program" placeholder="Kod Program / Nama Program" />
-<div id="senarai_program"></div>
-
-</div>
+    <div class="content">
+        <input type="text" class="form-control" autocomplete="off" id="nama_program" placeholder="Kod Program / Nama Program" />
+        <div id="senarai_program"></div>
+    </div>
    
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@ body {
 	display: block;
 }
 fieldset {
-	margin: 0 auto;
+	margin: 0px auto;
 	display: block;
 	margin-left: 20%;
 	margin-right: 20%;
@@ -35,16 +35,16 @@ fieldset {
 legend.label {
 	background-color: #f39c12;
 	width: auto;
-	height: 0px auto;
+	height: auto;
 	text-align: left;
 	font-size: 1.5em;
-	padding: 0 auto;
+	padding: 0px auto;
 	margin-left: 20px;
 }
 .form-group {
 	display: block;
 	margin: 5px auto;
-	padding: auto;
+	padding: 0px auto;
 	width: auto;
 }
 span.label {
@@ -54,34 +54,42 @@ span.label {
 	text-align: left;
 	margin: 0px auto;
 	margin-left: 35px;
-	padding: 10px 15px 15px 10px;
-	display: inline-block;
+	padding: 10px 15px;
+	display: block;
 }
 .col-lg-6 {
 	display: inline-block;
 	margin: 0px auto;
-	width: 400px auto;
+	width: 400px;
 }
 .col-md-5 {
 	display: inline-block;
 	margin: 0px auto;
 	width: auto;
 }
+h5 {
+	margin: 5px auto;
+	float: left;
+
+}
 .view {
 	float: left;
-	margin-top: 5px;
+	font-size: 1.2em;
+	margin: 5px;
 	width: auto;
 }
 .btn {
 	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-	font-weight: 5px;
 }
 .msg {
 	margin: 0px auto;
 }
 .navbar {
 	font-size: 1.2em;
+}
+table.table {
+	margin: 0px auto;
+}
+th {
+	margin: 0px auto;
 }

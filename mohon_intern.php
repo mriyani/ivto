@@ -1,3 +1,11 @@
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+if(isset($_SESSION['id_user'])) {
+} else {
+	header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,16 +92,12 @@ $('#nama_program').click(function(){
 		<legend class="label label-warning"><strong>Mohon Pusat Bertauliah Internship</strong></legend>
 			<div class="form-group">
 				<span class="label label-success">Carian Kod Program</span>
-				<div class="col-md-5">
-					<div class="view" name="name"></div>
-					<div class="content">
-						<input type="text" class="form-control" autocomplete="off" id="nama_program" placeholder="Kod Program / Nama Program" />
-						<input type="hidden" id="id_program" />
-
+				<div class="col-lg-6">
+						<input type="text" class="form-control" autocomplete="off" id="nama_program" style="text-transform: uppercase" placeholder="Kod Program / Nama Program" />
+						<input type="hidden" id="id_program"/>
 						<div id="senarai_program"></div>
-					</div>
-					<div id="senarai_pb"></div>
 				</div>
+				<div id="senarai_pb"></div>
 			</div>
 		</fieldset><br>
 	</form>

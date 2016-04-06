@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 
 	} else {
 		session_destroy();
-}
+	}
 }
 ?>
 <!DOCTYPE html>
