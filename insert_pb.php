@@ -9,7 +9,7 @@ require_once ('conx/db.php');
 			$negeri	= $_POST["negeri"];
 			$poskod	= $_POST["poskod"];
 			$alamatpb = strtoupper($_POST["alamatpb"]);
-			
+
 			$check = mysqli_query($dbc, "SELECT * FROM pb WHERE kodpb='$kodpb' OR namapb='$namapb'");
 			$checkrow = mysqli_num_rows($check);
 			if ($checkrow>0) {
@@ -17,10 +17,9 @@ require_once ('conx/db.php');
 			} else {
 				$add = "INSERT INTO pb (kodpb, jenispb, namapb, alamatpb, notel, email, negeri, poskod)
 				VALUES ('$kodpb', '$jenispb', '$namapb', '$alamatpb', '$notel', '$email', '$negeri', '$poskod')";
+				
 				mysqli_query($dbc,$add);
-			//	if (!mysqli_query($dbc,$add)) {
-				//	echo "Error: " . mysql_errno() . mysqli_error($dbc);
-			//	} else { 
+
 				$last_id = mysqli_insert_id($dbc); 
 				
 			}
