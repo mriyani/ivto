@@ -39,12 +39,10 @@ $("#nama_program").keyup(function() {
     }return false;    
 });
 
-
-
 	
 	$("#senarai_program").on("click",'tr',function(e){ 
 	
-	 e.preventDefault();
+	e.preventDefault();
     var id_prog = $(this).attr('value');
 	alert(id_prog);
 	var kod_prog=$(this).closest('tr').children('td.kod_prog').text();

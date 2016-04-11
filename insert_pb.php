@@ -1,5 +1,7 @@
 <?php
 require_once ('conx/db.php');
+$kodpb = '';
+$msg = '';
 	if(isset($_POST["submit"])) {
 			$kodpb = strtoupper($_POST["kodpb"]);
 			$jenispb = $_POST["jenispb"];
@@ -10,22 +12,24 @@ require_once ('conx/db.php');
 			$poskod	= $_POST["poskod"];
 			$alamatpb = strtoupper($_POST["alamatpb"]);
 
-			$check = mysqli_query($dbc, "SELECT * FROM pb WHERE kodpb='$kodpb' OR namapb='$namapb'");
-			$checkrow = mysqli_num_rows($check);
+			$query = mysqli_query($dbc, "SELECT * FROM pb WHERE kodpb='$kodpb' OR namapb='$namapb'");
+			$checkrow = mysqli_num_rows($query);
 			if ($checkrow>0) {
-				echo "<div class='msg'>Pusat Bertauliah Telah Ada Di Dalam Rekod</div>";
+				$msg = "Pusat Bertauliah Telah Terdapat Di Dalam Rekod";
 			} else {
 				$add = "INSERT INTO pb (kodpb, jenispb, namapb, alamatpb, notel, email, negeri, poskod)
 				VALUES ('$kodpb', '$jenispb', '$namapb', '$alamatpb', '$notel', '$email', '$negeri', '$poskod')";
 				
 				mysqli_query($dbc,$add);
 
-				$last_id = mysqli_insert_id($dbc); 
+				$msg = "Pusat Bertauliah Berjaya Didaftarkan";
+
+				//$last_id = mysqli_insert_id($dbc); 
 				
 			}
 	}
 
-	 $sel = "SELECT * FROM pb WHERE id_pb = '$last_id'";
+	 $sel = "SELECT * FROM pb WHERE kodpb = '$kodpb'";
 
 	 $result = mysqli_query($dbc,$sel);
 
@@ -37,6 +41,7 @@ require_once ('conx/db.php');
 <!DOCTYPE html>
 <html>
 <head>
+	<?php include ('menu.php'); ?>
 	<?php include ('hnf.php'); ?>
 	<title>Sistem Permohonan Internship</title>
 </head>
@@ -44,6 +49,7 @@ require_once ('conx/db.php');
 	<form class="form-horizontal">
 		<fieldset class="daftar">
 			<legend id="view" class="label label-warning"><strong>Maklumat Pusat Bertauliah</strong></legend>
+			<?php echo $msg; ?>
 			<div class="form-group">
 				<span class="label label-success">Kod PB</span>
 				<div class="col-lg-6">
