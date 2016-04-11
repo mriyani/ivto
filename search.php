@@ -24,8 +24,7 @@ while ($r_prog=mysqli_fetch_array($prog)) {
 		$b_nama_prog='<strong>'.$q.'</strong>';
 		$final_kod_prog= str_ireplace($q, $b_kod_prog, $kod_prog);
 		$final_nama_prog = str_ireplace($q, $b_nama_prog, $nama_prog);
-    
-		//	$hasil.="<tr><input type='hidden' id='id_personal' value='".$r_penyelia['id_personal']."'>";
+		
 		$hasil.="<tr value='".$r_prog['id_prog']."'>";
 		$hasil.="<td class='kod_prog' id='kod_prog'>$final_kod_prog</td>";
 		$hasil.="<td class='nama_prog' id='nama_prog'>$final_nama_prog</td>" ;

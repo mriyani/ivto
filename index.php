@@ -15,6 +15,7 @@ if (isset($_POST['submit'])) {
 	if ($checkrow > 0) { 
 		$row = mysqli_fetch_array($query);
 		$_SESSION['id_user'] = $row['id_user'];
+		$_SESSION['id_prog'] = $row['id_prog'];
 			header('Location: profile.php');
 
 	} else {
