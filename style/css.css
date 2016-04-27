@@ -96,3 +96,10 @@ th {
 .msg_output {
 	margin: left;
 }
+.pilihpb {
+	font-size: 1.0em;
+	font-weight: bolder;
+}
+.btn_mohon {
+	margin: 0px auto;
+}

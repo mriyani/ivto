@@ -16,7 +16,7 @@
 		//$cari = preg_replace("#[^0-9a-z]#i","",$cari);
 
 
-		$query = mysqli_query($dbc,"SELECT prog.kod_prog, prog.nama_prog, pb.namapb
+		$query = mysqli_query($dbc,"SELECT prog.id_prog, prog.kod_prog, prog.nama_prog, pb.namapb
 			FROM prog INNER JOIN pb ON prog.id_pb = pb.id_pb
 			WHERE prog.kod_prog LIKE '%$cari%' OR prog.nama_prog LIKE '%$cari%'");
 
@@ -27,16 +27,19 @@
 			$output = 'Carian Kod atau Nama Program tiada di dalam pangkalan data!!!';
 
 		} else {
-
+			$output ="<table align='center'><tbody>";
+			$output .="<tr><td class='pilihpb' align='center' width='25%'>NAMA PUSAT BERTAULIAH</td><td align='center' width='25%''>KOD PROGRAM</td><td align='center' width='40%'>NAMA PROGRAM</td><td align='center'>SILA PILIH</td></tr>";
 			while ($row = mysqli_fetch_assoc($query)) {
+				$id_prog = $row['id_prog'];
 				$namapb = $row['namapb'];
 				$kod_prog = $row['kod_prog'];
 				$nama_prog = $row['nama_prog'];
-
-				$output .= '<div>'.$namapb.' '.$kod_prog.' '.$nama_prog.'</div><br>';
+                $output .="<tr><td align='left'> $namapb </td><td align='center'> $kod_prog </td><td align='left'> $nama_prog </td><td><input type='radio' name='id_prog' id='id_prog' value='$id_prog'/></td></tr>";
+				//$output .= '<div>'.$namapb.' '.$kod_prog.' '.$nama_prog.'</div><br>';
 
 			}//end while loop
-
+                $output .="</tbody></table>";
+               
 		}//end else
 
 	}//end if(isset($_POST['cari']))
@@ -47,20 +50,47 @@
 	<title>Sistem Permohonan Internship</title>
 	<?php include ('menu.php'); ?>
 	<?php include ('hnf.php'); ?>
-	<script>
-	$(document).ready(function searchq() {
-		var searchTxt = $("input[name = 'searchq']").val();
-
-		$.POST("cari.php", {searchVal: searchTxt}, function(output) {
-			$("#output").html(output);
-
-		});
-	});
 
 
-	</script>
 </head>
 <body>
+
+	<script>
+
+	$(document).ready(function() {
+		//$(document).ready(function searchq() {
+
+			//alert('test');
+			
+	   /* function searchq(){
+	    alert('test');
+	var searchTxt = $("input[name = 'searchq']").val();
+
+			$.POST("cari.php", {searchVal: searchTxt}, function(output) {
+				$("#output").html(output);
+
+	    }  );//end function searchq
+			
+		*/
+	$('#mohon_btn').on('click',function() {
+		$.ajax({
+        type: "POST",
+        url: "mohon.php",
+        data: $id_prog:,
+        cache: false,
+            success: function(html) {
+                $("#senarai_program").html(html).show();
+             
+        	}
+        });
+
+	});
+	
+	}); //end $(document).ready(function() {
+
+	</script>
+
+
 	<form class="form-horizontal" name="mohon" action="mohon_intern.php" method="POST">
 		<fieldset class="daftar">
 		<legend class="label label-warning"><strong>Mohon Pusat Bertauliah Internship</strong></legend>
@@ -72,6 +102,14 @@
 				<button type="submit" name="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span>  Cari</button>
 			</div>
 			<br><div class="msg_output" id="output"><?php print ("$output"); ?></div>
+		</fieldset><br>
+		<?php 
+			   if($output !=''){
+			    $button ="<div class='btn_mohon' align='center'>";
+				$button .="<button type='button' name='mohon_btn' id='mohon_btn' class='btn btn-info'> Mohon</button>";
+		        $button .="</div><br>"; 
+		        echo $button; } ?>
+
 	</form>
 </body>
 </html>

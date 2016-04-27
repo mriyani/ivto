@@ -4,7 +4,8 @@ session_start();
 if(isset($_SESSION['id_user'])) {
 	require_once('conx/db.php');
 	$id_user =  $_SESSION['id_user'];
-	$sql = "SELECT user.*, prog.kod_prog, prog.nama_prog FROM user LEFT JOIN prog ON user.id_prog = prog.id_prog WHERE user.id_user = '$id_user' ";
+	$id_prog = $_POST['$id_prog'];
+	$sql = "SELECT  pb.*, prog.kod_prog, prog.nama_prog, user.* FROM pb LEFT JOIN prog ON pb.id_pb = prog.id_pb WHERE user.id_user = '$id_user' ";
 	$query = mysqli_query($dbc, $sql);
 	$result = mysqli_fetch_assoc($query);
 	$name = $result['nama'];
@@ -27,7 +28,7 @@ if(isset($_SESSION['id_user'])) {
 <body>
 	<form class="form-horizontal" name="profile" action="logout.php" method="POST">
 		<fieldset class="daftar">
-		<legend class="label label-warning"><strong>Permohonan Pusat Bertaulaih Internship</strong></legend>
+		<legend class="label label-warning"><strong>Profile</strong></legend>
 			<div class="form-group">
 				<span class="label label-success">Nama</span>
 					<div class="col-md-5">

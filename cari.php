@@ -18,7 +18,7 @@ if(!empty($_POST['searchVal'])) { //check method POST 'searcVal'
 			$output = 'Carian Kod atau Nama Program tiada di dalam pangkalan data!!!';
 
 		} else {
-
+            $output ='<div> Nama PB Kod Program Nama Program</div><br>';
 			while ($row = mysqli_fetch_assoc($query)) {
 				$namapb = $row['namapb'];
 				$kod_prog = $row['kod_prog'];
