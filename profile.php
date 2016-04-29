@@ -15,7 +15,6 @@ if(isset($_SESSION['id_user'])) {
 } else {
 	header('Location: index.php');
 }
-
 ?>
 <!DOCTYPE html>
 <html>

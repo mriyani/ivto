@@ -28,17 +28,16 @@
 
 		} else {
 			$output ="<table align='center'><tbody>";
-			$output .="<tr><td class='pilihpb' align='center' width='25%'>NAMA PUSAT BERTAULIAH</td><td align='center' width='25%''>KOD PROGRAM</td><td align='center' width='40%'>NAMA PROGRAM</td><td align='center'>SILA PILIH</td></tr>";
+			$output .="<tr><td class='pilihpb' align='center' width='25%'>NAMA PUSAT BERTAULIAH</td><td class='pilihpb' align='center' width='25%''>KOD PROGRAM</td><td class='pilihpb' align='center' width='40%'>NAMA PROGRAM</td><td class='pilihpb' align='center'>SILA PILIH</td></tr>";
 			while ($row = mysqli_fetch_assoc($query)) {
 				$id_prog = $row['id_prog'];
 				$namapb = $row['namapb'];
 				$kod_prog = $row['kod_prog'];
 				$nama_prog = $row['nama_prog'];
                 $output .="<tr><td align='left'> $namapb </td><td align='center'> $kod_prog </td><td align='left'> $nama_prog </td><td><input type='radio' name='id_prog' id='id_prog' value='$id_prog'/></td></tr>";
-				//$output .= '<div>'.$namapb.' '.$kod_prog.' '.$nama_prog.'</div><br>';
 
 			}//end while loop
-                $output .="</tbody></table>";
+                $output .="</tbody></table><br>";
                
 		}//end else
 
@@ -50,8 +49,6 @@
 	<title>Sistem Permohonan Internship</title>
 	<?php include ('menu.php'); ?>
 	<?php include ('hnf.php'); ?>
-
-
 </head>
 <body>
 
@@ -62,7 +59,7 @@
 
 			//alert('test');
 			
-	   /* function searchq(){
+	    function searchq(){
 	    alert('test');
 	var searchTxt = $("input[name = 'searchq']").val();
 
@@ -71,7 +68,7 @@
 
 	    }  );//end function searchq
 			
-		*/
+		
 	$('#mohon_btn').on('click',function() {
 		$.ajax({
         type: "POST",
@@ -106,10 +103,9 @@
 		<?php 
 			   if($output !=''){
 			    $button ="<div class='btn_mohon' align='center'>";
-				$button .="<button type='button' name='mohon_btn' id='mohon_btn' class='btn btn-info'> Mohon</button>";
+				$button .="<button type='button' name='mohon_btn' id='mohon_btn' class='btn btn-info'><a href='mohon.php'> Mohon</a></button>";
 		        $button .="</div><br>"; 
 		        echo $button; } ?>
-
 	</form>
 </body>
 </html>
